@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/ychatdb?allowPublicKeyRetrieval=true&useSSL=false
+    username: root
+    password: ychat@@00
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
