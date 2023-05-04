@@ -1,22 +1,20 @@
 package br.com.ychat.messeger.model.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.data.cassandra.core.mapping.PrimaryKey;
 
-@Getter
-@Setter
-@Entity
-@NoArgsConstructor
-@AllArgsConstructor
+import java.util.Date;
+
+
+@Data
+@Builder
+@Table(schema = "user")
 public class User {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
 
+    @PrimaryKey
+    private Long id;
     private String firstName;
 
     private String lastName;
@@ -24,5 +22,7 @@ public class User {
     private String login;
 
     private String email;
+
+    private Date createAt;
 
 }

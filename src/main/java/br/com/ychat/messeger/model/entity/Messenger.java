@@ -1,23 +1,18 @@
 package br.com.ychat.messeger.model.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.data.cassandra.core.mapping.PrimaryKey;
 
 import java.util.Date;
 
-@Getter
-@Setter
-@Entity
-@NoArgsConstructor
-@AllArgsConstructor
+@Data
+@Builder
+@Table(schema = "messager")
 public class Messenger {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    @PrimaryKey
+    private Long id;
 
     private Integer idUser;
 

@@ -1,8 +1,9 @@
-spring:
-  datasource:
-    url: jdbc:mysql://localhost:3306/ychatdb?allowPublicKeyRetrieval=true&useSSL=false
-    username: root
-    password: ychat@@00
-  jpa:
-    hibernate:
-      ddl-auto: create-drop
+#spring:
+#  data:
+#    cassandra:
+#      contact-points: localhost
+#      port: 9042
+#      keyspace-name: simple_crud
+#      #username: cassandra
+#      #password: cassandra
+#      schema-act: create_if_not_exists
